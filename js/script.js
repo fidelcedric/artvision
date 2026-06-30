@@ -42,11 +42,13 @@
         });
     });
 
-    lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-            closeLightbox();
-        }
-    });
+    if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+                closeLightbox();
+            }
+        });
+    }
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeLightbox();
     });
@@ -103,18 +105,21 @@
         }
     }
 
-    document.getElementById('gallery-filters').addEventListener('click', function (e) {
-        var btn = e.target.closest('.gallery-filter-btn');
-        if (!btn) return;
-        document.querySelectorAll('.gallery-filter-btn').forEach(function (b) {
-            b.classList.remove('active');
+    var galleryFilters = document.getElementById('gallery-filters');
+    if (galleryFilters) {
+        galleryFilters.addEventListener('click', function (e) {
+            var btn = e.target.closest('.gallery-filter-btn');
+            if (!btn) return;
+            document.querySelectorAll('.gallery-filter-btn').forEach(function (b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            var cat = btn.dataset.filter;
+            document.querySelectorAll('.gallery-card').forEach(function (card) {
+                card.classList.toggle('hidden', cat !== 'all' && card.dataset.category !== cat);
+            });
         });
-        btn.classList.add('active');
-        var cat = btn.dataset.filter;
-        document.querySelectorAll('.gallery-card').forEach(function (card) {
-            card.classList.toggle('hidden', cat !== 'all' && card.dataset.category !== cat);
-        });
-    });
+    }
 
     var currentT = 0;
     var testimonials = document.querySelectorAll('.testimonial-card');
@@ -134,8 +139,10 @@
     function nextT() { updateTestimonial((currentT + 1) % totalT); }
     function prevT() { updateTestimonial((currentT - 1 + totalT) % totalT); }
 
-    document.getElementById('testimonial-prev').addEventListener('click', function () { prevT(); resetTAuto(); });
-    document.getElementById('testimonial-next').addEventListener('click', function () { nextT(); resetTAuto(); });
+    var prevBtn = document.getElementById('testimonial-prev');
+    var nextBtn = document.getElementById('testimonial-next');
+    if (prevBtn) prevBtn.addEventListener('click', function () { prevT(); resetTAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { nextT(); resetTAuto(); });
     document.querySelectorAll('.testimonial-indicator').forEach(function (dot, i) {
         dot.addEventListener('click', function () { updateTestimonial(i); resetTAuto(); });
     });

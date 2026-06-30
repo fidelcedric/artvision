@@ -16,6 +16,17 @@ body {
     color: var(--dark);
 }
 
+.hidden { display: none; }
+
+.bg-primary-700 { background-color: var(--primary); }
+.hover\:bg-primary-800:hover { background-color: var(--primary-dark); }
+.text-primary-700 { color: var(--primary); }
+.text-primary-800 { color: var(--primary-dark); }
+.bg-primary-100 { background-color: var(--primary-light); }
+.hover\:text-primary-800:hover { color: var(--primary-dark); }
+.hover\:bg-primary-50:hover { background-color: rgba(74, 111, 165, 0.05); }
+.bg-primary-50 { background-color: rgba(74, 111, 165, 0.05); }
+
 .brand-font {
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
