@@ -1,13 +1,13 @@
 :root {
-    --primary: #4A6FA5;
-    --primary-dark: #3A5A8A;
-    --primary-light: #EDE9FE;
-    --secondary: #E57A44;
-    --accent: #F4D35E;
-    --dark: #2D3142;
-    --light: #F7F9FC;
-    --purple: #7C3AED;
-    --purple-light: #C4B5FD;
+    --primary: #31748f;
+    --primary-dark: #286476;
+    --primary-light: #cbe0e8;
+    --secondary: #ebbcba;
+    --accent: #f6c177;
+    --dark: #191724;
+    --light: #f5f0eb;
+    --purple: #c4a7e7;
+    --purple-light: #e5d5f5;
 }
 
 body {
@@ -26,14 +26,28 @@ body {
     .nav-mobile-btn { display: block; }
 }
 
+.text-primary { color: var(--primary); }
 .bg-primary-700 { background-color: var(--primary); }
 .hover\:bg-primary-800:hover { background-color: var(--primary-dark); }
 .text-primary-700 { color: var(--primary); }
 .text-primary-800 { color: var(--primary-dark); }
 .bg-primary-100 { background-color: var(--primary-light); }
 .hover\:text-primary-800:hover { color: var(--primary-dark); }
-.hover\:bg-primary-50:hover { background-color: rgba(74, 111, 165, 0.05); }
-.bg-primary-50 { background-color: rgba(74, 111, 165, 0.05); }
+.hover\:bg-primary-50:hover { background-color: rgba(49, 116, 143, 0.05); }
+.bg-primary-50 { background-color: rgba(49, 116, 143, 0.05); }
+
+.text-rosepine-900 { color: #ebbcba; }
+.text-rosepine-800 { color: #c4a7e7; }
+.text-rosepine-700 { color: #9ccfd8; }
+.text-rosepine-200 { color: #e0def4; }
+.text-rosepine-100 { color: #f5f0eb; }
+.bg-rosepine-800 { background-color: #1f1d2e; }
+.bg-rosepine-100 { background-color: #e5d5f5; }
+.border-rosepine-500 { border-color: #c4a7e7; }
+.hover\:text-rosepine-900:hover { color: #ebbcba; }
+.bg-rosepine-900 { background-color: #191724; }
+.bg-opacity-30 { opacity: 0.3; }
+.bg-gradient-community { background: linear-gradient(135deg, #1f1d2e, #31748f); }
 
 .brand-font {
     font-family: 'Playfair Display', serif;
