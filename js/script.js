@@ -5,11 +5,11 @@
     var mobileMenu = document.getElementById('mobile-menu');
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', function () {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('open');
         });
         mobileMenu.querySelectorAll('a').forEach(function (a) {
             a.addEventListener('click', function () {
-                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('open');
             });
         });
     }

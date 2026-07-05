@@ -18,6 +18,14 @@ body {
 
 .hidden { display: none; }
 
+.nav-desktop { display: flex; }
+.nav-mobile-btn { display: none; }
+
+@media (max-width: 767px) {
+    .nav-desktop { display: none; }
+    .nav-mobile-btn { display: block; }
+}
+
 .bg-primary-700 { background-color: var(--primary); }
 .hover\:bg-primary-800:hover { background-color: var(--primary-dark); }
 .text-primary-700 { color: var(--primary); }
@@ -180,6 +188,13 @@ body {
     .gallery-filter-btn { padding: 0.4rem 0.9rem; font-size: 0.85rem; margin: 0.15rem; }
     .lightbox-content { max-width: 98%; max-height: 70vh; }
     .partner-logo { max-height: 5rem; }
+}
+
+.mobile-menu { display: none; }
+.mobile-menu.open { display: block; }
+
+@media (min-width: 768px) {
+    .mobile-menu { display: none !important; }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
