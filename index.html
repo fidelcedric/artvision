@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ArtVision | Contemporary Art Collective — Nairobi</title>
-<meta name="description" content="ArtVision is a contemporary art collective based in Nairobi, Kenya. Discover African artists, exhibitions, and join our creative community.">
+<title>ArtVision | Art gallery concept demo</title>
+<meta name="description" content="A static art gallery concept built with HTML, CSS, and JavaScript. Sample content, not a real gallery.">
 <meta property="og:title" content="ArtVision | Contemporary Art Collective">
-<meta property="og:description" content="Contemporary art collective based in Nairobi, Kenya. Discover African artists and join our community.">
+<meta property="og:description" content="A static art gallery concept with sample content. Not a real gallery.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fidelcedric.github.io/artvision/">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,10 +18,12 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ArtGallery","name":"ArtVision","description":"Contemporary art collective based in Nairobi, Kenya","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"url":"https://fidelcedric.github.io/artvision/"}
+{"@context":"https://schema.org","@type":"ArtGallery","name":"ArtVision","description":"Static art gallery concept with sample content","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"url":"https://fidelcedric.github.io/artvision/"}
 </script>
 </head>
 <body>
+
+<div class="bg-rosepine-800 text-white text-center text-xs py-2 px-4">Concept demo. Gallery images and testimonials are sample content.</div>
 
 <nav class="bg-white shadow-sm sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,24 +118,24 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <div class="gallery-card fade-in painting" data-category="painting">
 <div class="artwork-card rounded-xl overflow-hidden bg-gray-100 mb-3">
-<img src="assets/images/gallery-02.webp" alt="Abstract Expressionism painting by Njideka Crosby" loading="lazy">
+<img src="assets/images/gallery-02.webp" alt="Abstract Expressionism painting by Sample visitor" loading="lazy">
 </div>
 <h3 class="font-bold text-gray-900 mb-1">Abstract Expressionism</h3>
-<p class="text-gray-600">By Njideka Crosby</p>
+<p class="text-gray-600">By Sample visitor</p>
 </div>
 <div class="gallery-card fade-in sculpture" data-category="sculpture">
 <div class="artwork-card rounded-xl overflow-hidden bg-gray-100 mb-3">
-<img src="assets/images/wood.webp" alt="Wooden Sculpture by El Anatsui" loading="lazy">
+<img src="assets/images/wood.webp" alt="Wooden Sculpture by Sample visitor" loading="lazy">
 </div>
 <h3 class="font-bold text-gray-900 mb-1">Wooden Sculpture</h3>
-<p class="text-gray-600">By El Anatsui</p>
+<p class="text-gray-600">By Sample visitor</p>
 </div>
 <div class="gallery-card fade-in digital" data-category="digital">
 <div class="artwork-card rounded-xl overflow-hidden bg-gray-100 mb-3">
-<img src="assets/images/gallery-03.webp" alt="Digital Collage by Wangechi Mutu" loading="lazy">
+<img src="assets/images/gallery-03.webp" alt="Digital Collage by Sample visitor" loading="lazy">
 </div>
 <h3 class="font-bold text-gray-900 mb-1">Digital Collage</h3>
-<p class="text-gray-600">By Wangechi Mutu</p>
+<p class="text-gray-600">By Sample visitor</p>
 </div>
 <div class="gallery-card fade-in painting" data-category="painting">
 <div class="artwork-card rounded-xl overflow-hidden bg-gray-100 mb-3">
@@ -189,16 +191,16 @@
 <div class="max-w-4xl mx-auto px-6">
 <div class="text-center mb-12">
 <h2 class="text-3xl font-bold text-gray-900 mb-4">Testimonials</h2>
-<p class="text-gray-600 max-w-xl mx-auto">See what our valued artists and partners say about us.</p>
+<p class="text-gray-600 max-w-xl mx-auto">Sample testimonials used to show the carousel layout. The names, quotes, and photos are placeholders.</p>
 </div>
 <div class="relative min-h-[28rem]">
 <div id="testimonialCarousel">
 <div class="testimonial-card absolute inset-0 opacity-100 visible transition-opacity duration-500">
 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-6 sm:p-8 border border-gray-200">
 <div class="flex items-center mb-6">
-<img class="h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-rosepine-500 shadow-md" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Njideka Crosby">
+<img class="h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-rosepine-500 shadow-md" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sample visitor">
 <div class="ml-4">
-<h4 class="text-lg sm:text-xl font-semibold text-gray-900">Njideka Crosby</h4>
+<h4 class="text-lg sm:text-xl font-semibold text-gray-900">Sample visitor</h4>
 <p class="text-rosepine-700 text-sm font-medium">Visual Artist</p>
 <div class="flex mt-1 text-yellow-500 gap-0.5">
 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
@@ -206,15 +208,15 @@
 </div>
 </div>
 <blockquote class="text-gray-600 italic leading-relaxed text-base sm:text-lg">"As an artist who values cultural dialogue, I appreciate how ArtVision fosters meaningful conversations between artists, critics, and art enthusiasts across continents."</blockquote>
-<div class="text-sm text-gray-500 mt-4">Featured in <span class="font-semibold">ArtReview</span></div>
+<div class="text-sm text-gray-500 mt-4">Sample attribution</div>
 </div>
 </div>
 <div class="testimonial-card absolute inset-0 opacity-0 invisible transition-opacity duration-500">
 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-6 sm:p-8 border border-gray-200">
 <div class="flex items-center mb-6">
-<img class="h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-rosepine-500 shadow-md" src="https://randomuser.me/api/portraits/men/32.jpg" alt="El Anatsui">
+<img class="h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-rosepine-500 shadow-md" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sample visitor">
 <div class="ml-4">
-<h4 class="text-lg sm:text-xl font-semibold text-gray-900">El Anatsui</h4>
+<h4 class="text-lg sm:text-xl font-semibold text-gray-900">Sample visitor</h4>
 <p class="text-rosepine-700 text-sm font-medium">Sculptor</p>
 <div class="flex mt-1 text-yellow-500 gap-0.5">
 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -222,15 +224,15 @@
 </div>
 </div>
 <blockquote class="text-gray-600 italic leading-relaxed text-base sm:text-lg">"The platform has been instrumental in expanding my international reach while maintaining strong connections to our African artistic roots."</blockquote>
-<div class="text-sm text-gray-500 mt-4">Featured in <span class="font-semibold">Tate Modern Exhibition</span></div>
+<div class="text-sm text-gray-500 mt-4">Sample attribution</div>
 </div>
 </div>
 <div class="testimonial-card absolute inset-0 opacity-0 invisible transition-opacity duration-500">
 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-6 sm:p-8 border border-gray-200">
 <div class="flex items-center mb-6">
-<img class="h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-rosepine-500 shadow-md" src="https://randomuser.me/api/portraits/women/25.jpg" alt="Wangechi Mutu">
+<img class="h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-rosepine-500 shadow-md" src="https://randomuser.me/api/portraits/women/25.jpg" alt="Sample visitor">
 <div class="ml-4">
-<h4 class="text-lg sm:text-xl font-semibold text-gray-900">Wangechi Mutu</h4>
+<h4 class="text-lg sm:text-xl font-semibold text-gray-900">Sample visitor</h4>
 <p class="text-rosepine-700 text-sm font-medium">Digital Artist</p>
 <div class="flex mt-1 text-yellow-500 gap-0.5">
 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -238,7 +240,7 @@
 </div>
 </div>
 <blockquote class="text-gray-600 italic leading-relaxed text-base sm:text-lg">"ArtVision has created a powerful network that supports digital artists like myself in ways traditional galleries never could."</blockquote>
-<div class="text-sm text-gray-500 mt-4">Featured in <span class="font-semibold">Venice Biennale</span></div>
+<div class="text-sm text-gray-500 mt-4">Sample attribution</div>
 </div>
 </div>
 </div>

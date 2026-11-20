@@ -1,51 +1,42 @@
-# ArtVision — Contemporary Art Collective
+# ArtVision
 
-A responsive art gallery website built for a contemporary African art collective based in Nairobi, Kenya.
+A static art gallery concept built with HTML, CSS, and vanilla JavaScript. It runs on GitHub Pages.
 
-## Features
+The gallery images, artist names, and testimonials are sample content used to show the layout. They do not describe a real collective or real endorsements. Replace them with credited work and verified quotes before using this design for a real gallery.
 
-- **Responsive design** — mobile, tablet, desktop (320px–4K)
-- **Image gallery** with category filtering (paintings, sculptures, digital art)
-- **Lightbox viewer** with interactive **C/WebAssembly image filters** (grayscale, sepia, invert)
-- **Testimonial carousel** with auto-advance and manual controls
-- **SEO-optimized** — JSON-LD schema, OG tags, semantic HTML
-- **Performance** — WebP images, lazy loading, Intersection Observer animations
+## What it does
 
-## Tech Stack
+- Responsive gallery with category filters for paintings, sculptures, and digital art
+- Lightbox viewer with C/WebAssembly filters: grayscale, sepia, and invert
+- Carousel with JavaScript controls and CSS fallbacks when WASM does not load
+- JSON-LD schema, Open Graph tags, WebP images, and lazy loading
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | HTML, CSS, Vanilla JS |
-| Styling | Custom CSS with CSS variables |
-| Image processing | **C → WebAssembly** (Emscripten) |
-| Icons | Font Awesome 6 |
-| Fonts | Inter + Playfair Display (Google Fonts) |
-| Deployment | GitHub Pages |
+## Files
 
-## C / WebAssembly Integration
+| Path | Purpose |
+|---|---|
+| `index.html` | Page structure and content |
+| `css/style.css` | Styles and theme variables |
+| `js/script.js` | Gallery, lightbox, and carousel behavior |
+| `js/wasm-bridge.js` | WASM loader |
+| `wasm/filters.c` | C source for the three filters |
+| `wasm/Makefile` | Emscripten build command |
+| `filters.wasm` | Pre-compiled filter module |
 
-Image filters are written in C and compiled to WebAssembly via Emscripten:
-
-- `wasm/filters.c` — grayscale, sepia, and invert pixel functions
-- `wasm/Makefile` — emcc build command
-- `js/wasm-bridge.js` — WASM loader and JS glue
-- `filters.wasm` — pre-compiled binary (7.5 KB)
-
-Filters apply in real-time to gallery images inside the lightbox. Falls back to CSS filters if WASM fails to load.
-
-### Rebuild WASM
+## Rebuild the filter module
 
 ```bash
 cd wasm
 make
 ```
 
-Requires [Emscripten](https://emscripten.org).
+This requires [Emscripten](https://emscripten.org).
 
-## Live Demo
+## Links
 
-**[fidelcedric.github.io/artvision](https://fidelcedric.github.io/artvision/)**
+- Live site: https://fidelcedric.github.io/artvision/
+- Source: https://github.com/fidelcedric/artvision
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
